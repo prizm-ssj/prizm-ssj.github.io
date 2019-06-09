@@ -1,3 +1,9 @@
+---
+layout: post
+title: 마크다운으로 글 작성하기
+category:
+tags: [markdown]
+---
 
 ## 마크다운
   [1.마크다운은 글을 쓰는 방법입니다](#markdown)
