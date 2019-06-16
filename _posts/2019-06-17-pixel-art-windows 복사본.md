@@ -1,6 +1,6 @@
 ---
 layout: post
-title: pixel-art-windows
+title: 픽셀아트 UI
 category:
 tags: codepen, purecss
 ---
