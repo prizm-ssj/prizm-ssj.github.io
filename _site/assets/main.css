@@ -1,6 +1,9 @@
 /**
  * Reset some basic elements
  */
+@import url("https://fonts.googleapis.com/css?family=Modak&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap");
+@import url("https://fonts.googleapis.com/css?family=VT323&display=swap");
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
@@ -504,26 +507,31 @@ table {
   .highlight .il {
     color: #099; }
 
+body {
+  font-family: 'Nanum Gothic', sans-serif; }
+
 .wrapper {
   max-width: inherit; }
 
 #Header {
   display: inline-block;
-  padding: 20px; }
+  padding: 0 20px; }
   #Header a {
-    float: left;
-    padding: 10px;
     font-weight: bold;
     color: #000; }
     #Header a:hover {
       text-decoration: none; }
   #Header nav {
     float: right;
-    line-height: 3em; }
+    line-height: 4em; }
   #Header h1 {
     display: inline-block;
+    float: left;
     margin: 0;
-    font-size: 2em; }
+    font-size: 3em;
+    font-family: 'VT323', monospace; }
+  #Header span {
+    font-size: 30px; }
 
 #masonry {
   display: block;
@@ -610,7 +618,8 @@ table {
     display: inline-block; }
   .sns button {
     border: none;
-    font-size: 1em; }
+    font-size: 1em;
+    background: none; }
     .sns button i {
       margin: 5px;
       padding: 5px; }
@@ -628,7 +637,124 @@ table {
     color: #6cc644; }
 
 .list {
-  list-style-type: none;
-  text-decoration: none;
   margin: 0;
-  padding-left: 10px; }
+  margin-left: 10px; }
+  .list .list-header h1 {
+    margin-bottom: 0px; }
+  .list .list-header p {
+    font-size: 0.9em; }
+  .list .list-content {
+    padding-left: 0px; }
+  .list ul {
+    list-style-type: none;
+    text-decoration: none;
+    margin-left: 0; }
+    .list ul li {
+      border-bottom: 1px solid #eee;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+      margin-right: 10px; }
+      .list ul li:after {
+        content: "";
+        clear: both;
+        display: block; }
+    .list ul h2 {
+      font-weight: bold;
+      margin-bottom: 0; }
+    .list ul h3 {
+      margin-bottom: 0;
+      font-size: 0.8em;
+      display: inline-block; }
+      .list ul h3 span {
+        margin-right: 5px; }
+    .list ul h4 {
+      margin-bottom: 0px;
+      font-size: 0.8em;
+      display: inline-block;
+      float: right; }
+    .list ul p {
+      margin-bottom: 0px;
+      font-size: 0.9em; }
+
+#profile {
+  margin: 3em auto;
+  overflow: hidden;
+  position: relative;
+  max-width: 550px;
+  max-height: 550px; }
+  #profile:before {
+    display: block;
+    content: "";
+    z-index: -3;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: linear-gradient(45deg, #d4d4d4 4.55%, #fff5fb 4.55%, #fff5fb 50%, #d4d4d4 50%, #d4d4d4 54.55%, #fff5fb 54.55%, #fff5fb 100%);
+    background-size: 0.5em 0.5em; }
+  #profile:after {
+    display: block;
+    content: ""; }
+  #profile .sns {
+    margin: 0 10% 10% 10%;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0; }
+    #profile .sns li {
+      padding: 1em 0;
+      width: 50%;
+      text-align: center; }
+      #profile .sns li a {
+        text-decoration: none;
+        color: blue;
+        font-size: 1.5em; }
+
+.gradient-border {
+  border-style: solid;
+  border-image: linear-gradient(to right, #fcb1e0 0%, #4db3f6 100%);
+  border-image-slice: 1; }
+
+.top {
+  border-image-width: 1em 0 0 0; }
+
+.bottom {
+  border-image-width: 0 0 0 1em; }
+
+.left {
+  border-image-width: 0 0 1em 0; }
+
+.right {
+  border-image-width: 0 1em 0 0; }
+
+.all {
+  border-image-width: 1em; }
+
+.myName {
+  position: relative;
+  font-weight: normal;
+  font-size: 4em;
+  margin-top: 30px;
+  font-family: 'Modak', cursive;
+  text-align: center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-name: fluid;
+  background-image: url(https://img.freepik.com/free-photo/_40163-61.jpg?size=626&ext=jpg);
+  background-size: cover;
+  -webkit-text-stroke: 1px #4db3f6;
+  margin-bottom: 0; }
+  .myName :before {
+    text-shadow: 4px 2px 1px #40adff, 2px 2px 10px #f4b0e7;
+    content: "SEO JAY";
+    position: absolute;
+    display: inline;
+    z-index: -1; }
+
+@keyframes fluid {
+  from {
+    background-position: top; }
+  to {
+    background-position: bottom; } }

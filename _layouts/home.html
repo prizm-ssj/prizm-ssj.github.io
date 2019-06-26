@@ -2,7 +2,6 @@
 layout: default
 ---
 <ul id ="masonry" class="post-list">
-
 {% assign sorted = (site.works | sort:'date') | reverse %}
   {% for item in sorted%}
       {% if item.gallery == true%}
