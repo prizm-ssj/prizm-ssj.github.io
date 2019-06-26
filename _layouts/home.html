@@ -1,0 +1,28 @@
+---
+layout: default
+---
+<ul id ="masonry" class="post-list">
+
+{% assign sorted = (site.works | sort:'date') | reverse %}
+  {% for item in sorted%}
+      {% if item.gallery == true%}
+      <li>
+          <img src="{{item.image}}" alt="{{itme.title}} 대표이미지">
+          <a href="{{ item.url }}">
+              <h3>{{ item.title }}</h3>
+              <h2>
+                  {% for each in item.categories %}
+                  <span>{{each}}</span>
+                  {% endfor %}
+              </h2>
+              <h4>
+              {% assign tools = item.tools | split:"," %}
+              {% for tool in tools %}
+              <span>{{tool}}</span>
+              {% endfor %}
+              </h4>
+          </a>
+        </li>
+       {% endif%}
+  {% endfor%}
+</ul>
